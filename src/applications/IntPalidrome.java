@@ -4,8 +4,7 @@ package applications;
  * Given an integer, check if it is a palindrome without using extra space, O(1)
  * space is acceptable
  * 
- * sol1:compare left and right digit,
- * if equal, then chop left and right off
+ * sol1:compare left and right digit, if equal, then chop left and right off
  * keep on repeating
  * 
  * 
@@ -51,5 +50,16 @@ public class IntPalidrome {
 			return true;
 		else
 			return false;
+	}
+
+	public int reverse(int x) {
+
+		int newN = 0;
+		while (x != 0) {
+			newN = newN * 10 + x % 10;
+			x /= 10;
+
+		}
+		return newN;
 	}
 }
