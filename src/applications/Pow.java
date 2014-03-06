@@ -3,7 +3,9 @@ package applications;
 public class Pow {
 
 	public double pow(double x, int n) {// O(logn),recursive
-
+		// doesn't work for 1.00000, -2147483648
+		// since java int [-2147483648,2147483647]
+		// and Math.abs(-2147483648) = -2147483648, bug since out of range
 		int exp = Math.abs(n);
 		double res = powRec(x, exp);
 		return (n > 0) ? res : 1.0 / res;

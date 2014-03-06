@@ -18,9 +18,9 @@ public class Test {
 		System.out.println(ip.reverse(-1000000013));
 
 		Pow p = new Pow();
-		System.out.println(p.pow(10, -3));
-		System.out.println(p.pow2(10, -3));
-
+		System.out.println("Pow: "+p.pow(1.00000, -2147483647));
+		System.out.println("Pow: "+p.pow2(1.00000, -2147483648));
+		System.out.println(Math.abs(-2147483647));
 		mergeArray ma = new mergeArray();
 		int[] a = { 3, 6, 7, 10 };
 		int[] b = { 1, 3, 5, 8, 9, 11 };
