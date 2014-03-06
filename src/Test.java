@@ -3,6 +3,7 @@ import java.util.Set;
 import applications.IntPalidrome;
 import applications.Pow;
 import applications.SortedArrayIntersection;
+import applications.ValidNumber;
 import applications.mergeArray;
 
 public class Test {
@@ -32,6 +33,10 @@ public class Test {
 		Set<Integer> ss = sai.getSortedArrayIntersection(c, d);
 		for (Integer tmp : ss)
 			System.out.print(tmp + " ");
+		
+		ValidNumber vn = new ValidNumber();
+		System.out.println(vn.isNumber("21344.1.23"));
+		
 	}
 
 }
