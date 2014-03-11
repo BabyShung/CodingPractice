@@ -5,6 +5,7 @@ import applications.Pow;
 import applications.SortedArrayIntersection;
 import applications.ValidNumber;
 import applications.mergeArray;
+import applications.strstr;
 
 public class Test {
 
@@ -37,6 +38,9 @@ public class Test {
 		ValidNumber vn = new ValidNumber();
 		System.out.println(vn.isNumber("21344.1.23"));
 		
+		
+		strstr str = new strstr();
+		System.out.println("strstr matched: "+str.strStr("ababac", "ababac"));
 	}
 
 }

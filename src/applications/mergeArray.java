@@ -1,5 +1,13 @@
 package applications;
 
+/**
+ * given two sorted array, merge them into one array.
+ * 
+ * 
+ * @author haozheng
+ * 
+ */
+
 public class mergeArray {
 
 	public int[] merge(int[] a, int[] b) {

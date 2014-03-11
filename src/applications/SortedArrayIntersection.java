@@ -1,5 +1,14 @@
 package applications;
 
+/**
+ * given two sorted array, find their intersection
+ * 
+ * Using HashSet
+ * 
+ * 
+ */
+
+
 import java.util.HashSet;
 import java.util.Set;
 

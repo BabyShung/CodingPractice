@@ -20,8 +20,16 @@ public class strstr {
 		next[0] = -1;
 		for (int i = 2; i <= pattern.length(); ++i) {
 			int j = next[i - 1];
-			while (j > -1 && pattern.charAt(i - 1) != pattern.charAt(j))
+			// System.out.println("current i: " + i + " current j: " + j
+			// + " current next[i - 1]: " + next[i - 1]);
+			while (j > -1 && pattern.charAt(i - 1) != pattern.charAt(j)) {
+				// System.out.println("current charAt(i-1): "
+				// + pattern.charAt(i - 1) + " current charAt(j): "
+				// + pattern.charAt(j)+ " current j: "+j+
+				// " and next[j]: "+next[j]);
 				j = next[j];
+				// System.out.println(" final j: "+j );
+			}
 			if (j > -1)
 				next[i] = j + 1;
 		}
