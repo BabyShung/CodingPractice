@@ -1,9 +1,11 @@
+import java.util.HashSet;
 import java.util.Set;
 
 import applications.IntPalidrome;
 import applications.Pow;
 import applications.SortedArrayIntersection;
 import applications.ValidNumber;
+import applications.WordLadder;
 import applications.mergeArray;
 import applications.strstr;
 
@@ -40,7 +42,17 @@ public class Test {
 		
 		
 		strstr str = new strstr();
-		System.out.println("strstr matched: "+str.strStr("ababac", "ababac"));
+		System.out.println("strstr matched: "+str.strStr("ababacdefghi", "bacdd"));
+		
+		WordLadder wl = new WordLadder();
+		HashSet<String>	dict = new HashSet<>();
+		dict.add("log");
+		dict.add("dog");
+		dict.add("hot");
+		dict.add("lot");
+		dict.add("dog");
+		System.out.println("WordLadder BFS: "+wl.ladderLengthBFS("hit", "cog", dict));
+		System.out.println("WordLadder Dijkstra: "+wl.ladderLengthDijkstra("hit", "cog", dict));
 	}
 
 }

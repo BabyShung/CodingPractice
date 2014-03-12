@@ -4,6 +4,29 @@ package applications;
  * String matching (StrStr)
  * 
  * 
+ * 1. brute force O(n^2)
+ * 
+ * 
+ * 2. KMP algo
+ * 
+ * terms: prefix: suffix: border: substring (can't be original string) that is
+ * both prefix and suffix
+ * 
+ * Define a next array b (length = pattern.length + 1)
+ * 
+ * If an index from pattern at which the current element mismatches the source
+ * element, then b[i] is the widest border of the previous already matched
+ * elements.
+ * 
+ * EG:
+ * 
+ * source: A B C B A G H J K
+ * 
+ * pattern: B C B A D
+ * 
+ * next[i]:-1 0 0 1 0 0
+ * 
+ * indices: 0 1 2 3 4 5
  * 
  * @author haozheng
  * 
@@ -20,15 +43,8 @@ public class strstr {
 		next[0] = -1;
 		for (int i = 2; i <= pattern.length(); ++i) {
 			int j = next[i - 1];
-			// System.out.println("current i: " + i + " current j: " + j
-			// + " current next[i - 1]: " + next[i - 1]);
-			while (j > -1 && pattern.charAt(i - 1) != pattern.charAt(j)) {
-				// System.out.println("current charAt(i-1): "
-				// + pattern.charAt(i - 1) + " current charAt(j): "
-				// + pattern.charAt(j)+ " current j: "+j+
-				// " and next[j]: "+next[j]);
+			while (j > -1 && pattern.charAt(j) != pattern.charAt(i - 1)) {
 				j = next[j];
-				// System.out.println(" final j: "+j );
 			}
 			if (j > -1)
 				next[i] = j + 1;
@@ -36,15 +52,20 @@ public class strstr {
 	}
 
 	public String strStr(String haystack, String needle) {
+
 		int n = haystack.length(), m = needle.length();
+
 		if (m == 0)
 			return haystack;
 		if (n < m)
 			return null;
+
 		int[] next = new int[m + 1];
 		buildNextTable(needle, next);
+
 		int offset = 0, start = 0;
-		while (offset < n) {
+
+		while (offset < n - m + 1) {
 			if (haystack.charAt(offset) == needle.charAt(start)) {
 				++offset;
 				if (++start == m) {
