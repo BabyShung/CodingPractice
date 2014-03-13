@@ -2,6 +2,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 import applications.IntPalidrome;
+import applications.LRU;
 import applications.Pow;
 import applications.SortedArrayIntersection;
 import applications.ValidNumber;
@@ -22,8 +23,8 @@ public class Test {
 		System.out.println(ip.reverse(-1000000013));
 
 		Pow p = new Pow();
-		System.out.println("Pow: "+p.pow(1.00000, -2147483647));
-		System.out.println("Pow: "+p.pow2(1.00000, -2147483648));
+		System.out.println("Pow: " + p.pow(1.00000, -2147483647));
+		System.out.println("Pow: " + p.pow2(1.00000, -2147483648));
 		System.out.println(Math.abs(-2147483647));
 		mergeArray ma = new mergeArray();
 		int[] a = { 3, 6, 7, 10 };
@@ -36,23 +37,37 @@ public class Test {
 		Set<Integer> ss = sai.getSortedArrayIntersection(c, d);
 		for (Integer tmp : ss)
 			System.out.print(tmp + " ");
-		
+
 		ValidNumber vn = new ValidNumber();
 		System.out.println(vn.isNumber("21344.1.23"));
-		
-		
+
 		strstr str = new strstr();
-		System.out.println("strstr matched: "+str.strStr("ababacdefghi", "bacdd"));
-		
+		System.out.println("strstr matched: "
+				+ str.strStr("ababacdefghi", "bacdd"));
+
 		WordLadder wl = new WordLadder();
-		HashSet<String>	dict = new HashSet<>();
+		HashSet<String> dict = new HashSet<>();
 		dict.add("log");
 		dict.add("dog");
 		dict.add("hot");
 		dict.add("lot");
 		dict.add("dog");
-		System.out.println("WordLadder BFS: "+wl.ladderLengthBFS("hit", "cog", dict));
-		System.out.println("WordLadder Dijkstra: "+wl.ladderLengthDijkstra("hit", "cog", dict));
+		System.out.println("WordLadder BFS: "
+				+ wl.ladderLengthBFS("hit", "cog", dict));
+		System.out.println("WordLadder Dijkstra: "
+				+ wl.ladderLengthDijkstra("hit", "cog", dict));
+
+		LRU cache = new LRU(4);
+		System.out.println("inserted: " + cache.loadPage(2));
+		System.out.println("inserted: " + cache.loadPage(3));
+		System.out.println("inserted: " + cache.loadPage(1));
+		System.out.println("inserted: " + cache.loadPage(2));
+		System.out.println("inserted: " + cache.loadPage(4));
+		System.out.println("inserted: " + cache.loadPage(1));
+		System.out.println("inserted: " + cache.loadPage(4));
+		System.out.println("inserted: " + cache.loadPage(5));
+		System.out.println("inserted: " + cache.loadPage(6));
+
 	}
 
 }
