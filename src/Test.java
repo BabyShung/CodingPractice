@@ -3,6 +3,7 @@ import java.util.Set;
 
 import applications.IntPalidrome;
 import applications.LRU;
+import applications.PlusOne;
 import applications.Pow;
 import applications.SortedArrayIntersection;
 import applications.ValidNumber;
@@ -68,6 +69,16 @@ public class Test {
 		System.out.println("inserted: " + cache.loadPage(5));
 		System.out.println("inserted: " + cache.loadPage(6));
 
+		
+		PlusOne po = new PlusOne();
+		int[] digits = {2,3,4,7};
+		int[] result = po.plusAnInteger(digits, 3249344);
+		System.out.println("plus an integer:");
+		for(int tmp: result){
+			System.out.print(tmp);
+		}
+		System.out.println();
+		
 	}
 
 }

@@ -39,4 +39,40 @@ public class PlusOne {
 		return digits;
 
 	}
+
+	public int[] plusAnInteger(int[] digits, int n) {
+
+		if (digits.length == 0)
+			return null;
+
+		for (int i = digits.length - 1; i >= 0; i--) {
+			if (n == 0)
+				return digits;
+
+			int ld = n % 10;
+
+			digits[i] += ld;
+			n /= 10;
+
+			if (digits[i] >= 10) {
+				digits[i] -= 10;
+				n++;
+			}
+		}
+
+		int m = 0, y = n;
+		while (y != 0) {
+			y /= 10;
+			m++;
+		}
+
+		int[] newA = new int[digits.length + m];
+		System.arraycopy(digits, 0, newA, m, digits.length);
+		for (int j = m - 1; j >= 0; j--) {
+			newA[j] = n % 10;
+			n /= 10;
+		}
+		return newA;
+	}
+
 }
