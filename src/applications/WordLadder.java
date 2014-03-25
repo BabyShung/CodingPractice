@@ -1,5 +1,11 @@
 package applications;
 
+/**
+ * Given two words (start and end), and a dictionary, find the length of shortest transformation sequence from start to end, such that:
+ * Only one letter can be changed at a time
+ * Each intermediate word must exist in the dictionary
+ */
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -35,13 +41,13 @@ public class WordLadder {
 		Map<String, Boolean> visited = new HashMap<String, Boolean>();
 		// BFS
 		while (!queue.isEmpty()) {
-			
+
 			PathNode node = queue.poll();
 			String currentWord = node.word;// get current path length
 			int length = node.length;// mark the word as visited
-			
+
 			visited.put(currentWord, true);
-			
+
 			// find all words that can be transformed from s and store in queue
 			// with len+1
 			if (dict.size() < 26) { // loop through all words in dict - O(n*m)
