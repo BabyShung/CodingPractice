@@ -1,6 +1,7 @@
 import java.util.HashSet;
 import java.util.Set;
 
+import applications.FirstMissingPositive;
 import applications.IntPalidrome;
 import applications.LRU;
 import applications.PlusOne;
@@ -78,6 +79,12 @@ public class Test {
 			System.out.print(tmp);
 		}
 		System.out.println();
+		
+		
+		FirstMissingPositive fmp = new FirstMissingPositive();
+		int[] fmparr = {-9,-3,-1,-5,3,6,2,1,5};
+		System.out.println("first missing positive: "+fmp.firstMissingPositive(fmparr));
+		
 		
 	}
 
