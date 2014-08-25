@@ -1,4 +1,5 @@
 import applications.SearchForARange;
+import applications.SearchInsertPosition;
 import applications.Sqrt;
 
 public class Test {
@@ -39,11 +40,16 @@ public class Test {
 		Sqrt sqrt = new Sqrt();
 		System.out.println("Sqrt: " + sqrt.sqrt(2));
 
-		int[] sfararr = { 1, 8, 8, 8, 8, 8, 9, 11 };
+		int[] sfararr = { 1, 7, 8, 8, 8, 8, 9, 11 };
 		SearchForARange sfar = new SearchForARange();
 		int[] sfarResult = sfar.searchRange(sfararr, 8);
 		System.out.println("[" + sfarResult[0] + "," + sfarResult[1] + "]");
 
+		
+		SearchInsertPosition sip = new SearchInsertPosition();
+		System.out.println("SearchInsertPosition: " +sip.searchInsert(sfararr, 8));
+		
+		
 		// WordLadder wl = new WordLadder();
 		// HashSet<String> dict = new HashSet<>();
 		// dict.add("log");
