@@ -1,5 +1,18 @@
 package applications;
 
+/**
+ * Implement Pow(x,n)
+ * 
+ * classic CS question
+ * 
+ * one of the intuitive solution is O(logN) using recursion, but remember to
+ * check whether the power is even or odd every time in the recursion
+ * 
+ * 
+ * @author haozheng
+ *
+ */
+
 public class Pow {
 
 	public double pow(double x, int n) {// O(logn),recursive
