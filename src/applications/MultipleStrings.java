@@ -26,6 +26,7 @@ public class MultipleStrings {
 		}
 		// convert back to string
 		StringBuilder ss = new StringBuilder();
+	
 		for (int k = l1 + l2 - 1; k >= 0; --k) {
 			ss.append((char) (res[k] % 10 + '0'));
 			if (k > 0)

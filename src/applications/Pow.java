@@ -15,6 +15,26 @@ package applications;
 
 public class Pow {
 
+	public double powHao(double x, int n) {
+
+		double result = powHaoRec(x, n);
+		return (n > 0) ? result : 1.0 / result;
+	}
+
+	private double powHaoRec(double x, int n) {
+		if (n == 0)
+			return 1;
+		else {
+			int e = Math.abs(n);
+			double tmp = pow(x, e >> 1);
+			double result = tmp * tmp;
+			if ((e & 1) == 1) {// odd
+				result *= x;
+			}
+			return result;
+		}
+	}
+
 	public double pow(double x, int n) {// O(logn),recursive
 		// doesn't work for 1.00000, -2147483648
 		// since java int [-2147483648,2147483647]

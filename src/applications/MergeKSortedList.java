@@ -4,6 +4,7 @@ import helperClass.ListNode;
 
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.List;
 import java.util.PriorityQueue;
 
 /**
@@ -68,5 +69,55 @@ public class MergeKSortedList {
 		}
 
 		return head;
+	}
+
+	// solution 2
+	public ListNode mergeKLists(List<ListNode> lists) {
+
+		if (lists.isEmpty())
+			return null;
+
+		int last = lists.size() - 1;
+
+		int current = 0;
+
+		while (last > 0) {
+			current = 0;
+
+			while (current < last) {
+				lists.set(current,
+						mergeTwoLists(lists.get(current++), lists.get(last--)));
+			}
+		}
+		return lists.get(0);
+
+	}
+
+	private ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+		if (l1 == null)
+			return l2;
+		if (l2 == null)
+			return l1;
+
+		ListNode fake = new ListNode(0);
+		ListNode cursor = fake;
+		while (l1 != null && l2 != null) {
+
+			if (l1.val <= l2.val) {
+				cursor.next = l1;
+				l1 = l1.next;
+			} else {
+				cursor.next = l2;
+				l2 = l2.next;
+			}
+			cursor = cursor.next;
+		}
+
+		if (l1 == null)
+			cursor.next = l2;
+		else
+			cursor.next = l1;
+
+		return fake.next;
 	}
 }
