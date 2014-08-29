@@ -1,4 +1,4 @@
-package applications;
+package Merge_LinkedList_Array;
 
 public class AddBinary {
 	public String addBinary(String a, String b) {

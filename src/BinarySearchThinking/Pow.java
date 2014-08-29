@@ -1,4 +1,4 @@
-package applications;
+package BinarySearchThinking;
 
 /**
  * Implement Pow(x,n)

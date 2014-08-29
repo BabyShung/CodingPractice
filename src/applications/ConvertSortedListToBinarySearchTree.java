@@ -33,6 +33,7 @@ public class ConvertSortedListToBinarySearchTree {
 		if (low > high)
 			return null;
 		int mid = low + (high - low) / 2;
+		
 		// build up tree recursively
 		TreeNode left = listToBST(head, low, mid - 1);
 		TreeNode root = new TreeNode(head.val);

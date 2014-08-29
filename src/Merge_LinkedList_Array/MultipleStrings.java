@@ -1,4 +1,4 @@
-package applications;
+package Merge_LinkedList_Array;
 
 public class MultipleStrings {
 	public String multiply(String num1, String num2) {

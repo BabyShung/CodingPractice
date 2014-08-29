@@ -1,4 +1,4 @@
-package applications;
+package Merge_LinkedList_Array;
 
 import helperClass.ListNode;
 

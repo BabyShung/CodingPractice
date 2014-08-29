@@ -1,4 +1,4 @@
-package applications;
+package Merge_LinkedList_Array;
 
 /**
  * given two sorted array, merge them into one array.

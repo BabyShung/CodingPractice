@@ -1,4 +1,4 @@
-package applications;
+package Merge_LinkedList_Array;
 
 import helperClass.Interval;
 
@@ -28,8 +28,11 @@ public class MergeIntervals {
 	}
 
 	private ArrayList<Interval> mergeWithArray(ArrayList<Interval> intervals) {
+		
 		ArrayList<Interval> results = new ArrayList<Interval>();
+		
 		Interval cur = null;
+		
 		for (int i = 0; i < intervals.size(); ++i) {
 			if (cur == null) {
 				cur = intervals.get(i);

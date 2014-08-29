@@ -1,4 +1,4 @@
-package applications;
+package BinarySearchThinking;
 
 import java.util.ArrayList;
 

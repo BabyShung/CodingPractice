@@ -1,4 +1,4 @@
-package applications;
+package BinarySearchThinking;
 
 public class SearchInsertPosition {
 	public int searchInsert(int[] A, int target) {

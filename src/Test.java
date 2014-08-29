@@ -1,6 +1,6 @@
-import applications.SearchForARange;
-import applications.SearchInsertPosition;
-import applications.Sqrt;
+import BinarySearchThinking.SearchForARange;
+import BinarySearchThinking.SearchInsertPosition;
+import BinarySearchThinking.Sqrt;
 
 public class Test {
 

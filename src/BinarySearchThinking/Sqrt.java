@@ -1,4 +1,4 @@
-package applications;
+package BinarySearchThinking;
 
 public class Sqrt {
 	public int sqrt(int x) {
