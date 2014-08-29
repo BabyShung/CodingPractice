@@ -1,4 +1,4 @@
-package applications;
+package Tree;
 
 import helperClass.TreeNode;
 
