@@ -1,6 +1,4 @@
-import BinarySearchThinking.SearchForARange;
-import BinarySearchThinking.SearchInsertPosition;
-import BinarySearchThinking.Sqrt;
+import Tree.UniqueBinarySearchTrees;
 
 public class Test {
 
@@ -37,17 +35,22 @@ public class Test {
 		// System.out.println("strstr matched: "
 		// + str.strStr("baaakaaaaayaaaaaa", "aaaaaa"));
 
-		Sqrt sqrt = new Sqrt();
-		System.out.println("Sqrt: " + sqrt.sqrt(2));
-
-		int[] sfararr = { 1, 7, 8, 8, 8, 8, 9, 11 };
-		SearchForARange sfar = new SearchForARange();
-		int[] sfarResult = sfar.searchRange(sfararr, 8);
-		System.out.println("[" + sfarResult[0] + "," + sfarResult[1] + "]");
-
+//		Sqrt sqrt = new Sqrt();
+//		System.out.println("Sqrt: " + sqrt.sqrt(2));
+//
+//		int[] sfararr = { 1, 7, 8, 8, 8, 8, 9, 11 };
+//		SearchForARange sfar = new SearchForARange();
+//		int[] sfarResult = sfar.searchRange(sfararr, 8);
+//		System.out.println("[" + sfarResult[0] + "," + sfarResult[1] + "]");
+//
+//		
+//		SearchInsertPosition sip = new SearchInsertPosition();
+//		System.out.println("SearchInsertPosition: " +sip.searchInsert(sfararr, 8));
+//		
 		
-		SearchInsertPosition sip = new SearchInsertPosition();
-		System.out.println("SearchInsertPosition: " +sip.searchInsert(sfararr, 8));
+		UniqueBinarySearchTrees ubst = new UniqueBinarySearchTrees();
+		System.out.println(ubst.generateTrees(14).size());
+		
 		
 		
 		// WordLadder wl = new WordLadder();
