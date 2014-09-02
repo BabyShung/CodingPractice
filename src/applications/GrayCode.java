@@ -1,6 +1,7 @@
 package applications;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * The gray code is a binary numeral system where two successive values differ
@@ -18,24 +19,25 @@ import java.util.ArrayList;
 
 public class GrayCode {
 
-	public ArrayList<Integer> grayCode(int n) {
-		// remember: 1<<n means 2^n -> 1<<0 = 2^0 = 1; 1<<1 = 2^1 = 2 ...
-		// the size is generalized from 0,1; 00,01,11,10;
-		// 000,001,011,010,110,111,101,100;
+	// remember: 1<<n means 2^n -> 1<<0 = 2^0 = 1; 1<<1 = 2^1 = 2 ...
+	// the size is generalized from 0,1; 00,01,11,10;
+	// 000,001,011,010,110,111,101,100;
+	public List<Integer> grayCode(int n) {
 
-		ArrayList<Integer> results = new ArrayList<Integer>(1 << n);
-		results.add(0);
-		System.out.println(Integer.toBinaryString(0) + " --- must have");
+		ArrayList<Integer> r = new ArrayList<>(1 << n);
+
+		r.add(0);
+
 		for (int i = 0; i < n; i++) {
 			int flipper = 1 << i;
-			for (int j = results.size() - 1; j >= 0; --j) {
 
-				int newBit = results.get(j) | flipper;
-				results.add(newBit);
-				System.out.println(Integer.toBinaryString(newBit));
+			for (int j = r.size() - 1; j >= 0; j--) {
+				r.add(flipper | r.get(j));
 			}
 		}
-		return results;
+
+		return r;
+
 	}
 
 }
