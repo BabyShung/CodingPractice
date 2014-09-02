@@ -1,4 +1,4 @@
-import Tree.UniqueBinarySearchTrees;
+import applications.GrayCode;
 
 public class Test {
 
@@ -35,24 +35,28 @@ public class Test {
 		// System.out.println("strstr matched: "
 		// + str.strStr("baaakaaaaayaaaaaa", "aaaaaa"));
 
-//		Sqrt sqrt = new Sqrt();
-//		System.out.println("Sqrt: " + sqrt.sqrt(2));
-//
-//		int[] sfararr = { 1, 7, 8, 8, 8, 8, 9, 11 };
-//		SearchForARange sfar = new SearchForARange();
-//		int[] sfarResult = sfar.searchRange(sfararr, 8);
-//		System.out.println("[" + sfarResult[0] + "," + sfarResult[1] + "]");
-//
-//		
-//		SearchInsertPosition sip = new SearchInsertPosition();
-//		System.out.println("SearchInsertPosition: " +sip.searchInsert(sfararr, 8));
-//		
-		
-		UniqueBinarySearchTrees ubst = new UniqueBinarySearchTrees();
-		System.out.println(ubst.generateTrees(14).size());
-		
-		
-		
+		// Sqrt sqrt = new Sqrt();
+		// System.out.println("Sqrt: " + sqrt.sqrt(2));
+		//
+		// int[] sfararr = { 1, 7, 8, 8, 8, 8, 9, 11 };
+		// SearchForARange sfar = new SearchForARange();
+		// int[] sfarResult = sfar.searchRange(sfararr, 8);
+		// System.out.println("[" + sfarResult[0] + "," + sfarResult[1] + "]");
+		//
+		//
+		// SearchInsertPosition sip = new SearchInsertPosition();
+		// System.out.println("SearchInsertPosition: "
+		// +sip.searchInsert(sfararr, 8));
+		//
+
+		// UniqueBinarySearchTrees ubst = new UniqueBinarySearchTrees();
+		// System.out.println(ubst.generateTrees(4).size());
+		//
+		// RemoveVowels rv = new RemoveVowels();
+		// String str = "AbcdefIgikulO";
+		// System.out.println("Recursive: "+rv.removeVowels(str));
+		// System.out.println("Iterative: "+rv.removeVowelsIterative(str));
+
 		// WordLadder wl = new WordLadder();
 		// HashSet<String> dict = new HashSet<>();
 		// dict.add("log");
@@ -93,8 +97,8 @@ public class Test {
 		//
 		//
 		//
-		// GrayCode gc = new GrayCode();
-		// gc.grayCode(1);
+		GrayCode gc = new GrayCode();
+		gc.grayCode(3);
 
 	}
 
