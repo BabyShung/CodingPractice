@@ -27,5 +27,7 @@ package applications;
  *
  */
 public class KthGrayCode {
-
+	public int kthGrayCode(int k) {  
+		   return k ^ (k>>1);  
+	} 
 }
