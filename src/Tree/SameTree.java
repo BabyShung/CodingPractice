@@ -24,7 +24,7 @@ public class SameTree {
 
 	// iterative solution, using BFS, almost the same as BFS algo, just minor
 	// difference
-	public boolean isSameTreeI(TreeNode p, TreeNode q) {
+	public boolean isSameTreeIterative(TreeNode p, TreeNode q) {
 
 		if (p == null && q == null)
 			return true;

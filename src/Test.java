@@ -1,3 +1,9 @@
+import helperClass.BST;
+import helperClass.TreeNode;
+import Tree.BSTLeastCommonAncester;
+import Tree.BSTSuccessor;
+import Tree.SameTree;
+import Tree.ValidateBinarySearchTree;
 import applications.GrayCode;
 
 public class Test {
@@ -100,6 +106,52 @@ public class Test {
 		GrayCode gc = new GrayCode();
 		gc.grayCode(3);
 
+		ValidateBinarySearchTree vbst = new ValidateBinarySearchTree();
+
+		SameTree st = new SameTree();
+
+		BSTSuccessor bsts = new BSTSuccessor();
+		
+		
+		// Hao BST
+		BST haoBST = new BST();
+		haoBST.insert(5);
+		haoBST.insert(3);
+		haoBST.insert(7);
+		haoBST.insert(4);
+//		haoBST.insert(2);
+//		haoBST.insert(6);
+//		haoBST.insert(9);
+//		haoBST.insert(15);
+//		haoBST.insert(11);
+//		haoBST.insert(13);
+
+		BST haoBST2 = new BST();
+		haoBST2.insert(5);
+		haoBST2.insert(3);
+		haoBST2.insert(7);
+		haoBST2.insert(4);
+		haoBST2.insert(2);
+		haoBST2.insert(6);
+		haoBST2.insert(9);
+		haoBST2.insert(15);
+		haoBST2.insert(11);
+		haoBST2.insert(13);
+
+		System.out.println(haoBST.getMaxNode());
+		System.out.println(haoBST.getSecondMax());
+
+		TreeNode root1 = haoBST.getRoot();
+		TreeNode root2 = haoBST2.getRoot();
+
+		System.out.println(vbst.isValidBSTIterative(root1));
+		System.out.println(st.isSameTreeIterative(root1, root2));
+		
+		System.out.println("getSuccessorValue: "+bsts.getSuccessorValue(root1, 1));
+		
+		BSTLeastCommonAncester bstlca = new BSTLeastCommonAncester();
+		System.out.println(bstlca.findLeastCommonAncester(root1, 3, 4));
+		
 	}
 
 }
