@@ -1,5 +1,7 @@
 package applications;
 
+import helperClass.ListNode;
+
 public class RotateList {
 	public ListNode rotateRight(ListNode head, int k) {
 		// find the length of the list
