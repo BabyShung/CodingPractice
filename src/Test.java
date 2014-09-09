@@ -105,6 +105,8 @@ public class Test {
 		//
 		GrayCode gc = new GrayCode();
 		gc.grayCode(3);
+		
+		System.out.println("yeah!: "+gc.lowbit(4));
 
 		ValidateBinarySearchTree vbst = new ValidateBinarySearchTree();
 

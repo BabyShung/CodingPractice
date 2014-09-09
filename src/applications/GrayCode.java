@@ -40,4 +40,12 @@ public class GrayCode {
 
 	}
 
+	public int lowbit(int x){
+		
+		System.out.println("Binary String: "+Integer.toBinaryString(x));
+		System.out.println("Binary String: "+Integer.toBinaryString(-x));
+		
+		return x & -x;
+	}
+	
 }
