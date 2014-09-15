@@ -1,5 +1,6 @@
 import helperClass.BST;
 import helperClass.TreeNode;
+import String_Array.FindTheFirstNonrepeatedCharacter;
 import Tree.BSTLeastCommonAncester;
 import Tree.BSTSuccessor;
 import Tree.SameTree;
@@ -154,6 +155,10 @@ public class Test {
 		BSTLeastCommonAncester bstlca = new BSTLeastCommonAncester();
 		System.out.println("LeastCommonAncester:"+bstlca.findLeastCommonAncester(root2, 6, 13));
 		
+		
+		FindTheFirstNonrepeatedCharacter ffnc = new FindTheFirstNonrepeatedCharacter();
+		System.out.println("find the first:" + ffnc.findTheFirstNonrepeated("afmvmcfvakwwk"));
+		System.out.println("find the first Naive:" + ffnc.findTheFirstNonrepeatedNaive("afmvmfvakwiwk"));
 	}
 
 }
