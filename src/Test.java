@@ -163,9 +163,11 @@ public class Test {
 		
 		RemoveSpecifiedString rsss = new RemoveSpecifiedString();
 		String source = "fab cdx ef ghffexxy";
-		String removeString = "xaef";
+		String removeString = "bxaef ";
 		System.out.println(source + " : " + rsss.removeChars(source, removeString));
 		System.out.println(source + " : " + rsss.removeCharsSB_BOOL(source, removeString));
+		System.out.println(source + " : " + rsss.removeCharsARRAY_HM(source, removeString));
+		System.out.println(source + " : " + rsss.removeCharsARRAY_BOOL(source, removeString));
 	}
 
 }
