@@ -1,4 +1,4 @@
-package applications;
+package String_Array;
 
 public class RemoveVowels {
 

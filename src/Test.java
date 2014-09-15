@@ -1,6 +1,7 @@
 import helperClass.BST;
 import helperClass.TreeNode;
 import String_Array.FindTheFirstNonrepeatedCharacter;
+import String_Array.RemoveSpecifiedString;
 import Tree.BSTLeastCommonAncester;
 import Tree.BSTSuccessor;
 import Tree.SameTree;
@@ -159,6 +160,12 @@ public class Test {
 		FindTheFirstNonrepeatedCharacter ffnc = new FindTheFirstNonrepeatedCharacter();
 		System.out.println("find the first:" + ffnc.findTheFirstNonrepeated("afmvmcfvakwwk"));
 		System.out.println("find the first Naive:" + ffnc.findTheFirstNonrepeatedNaive("afmvmfvakwiwk"));
+		
+		RemoveSpecifiedString rsss = new RemoveSpecifiedString();
+		String source = "fab cdx ef ghffexxy";
+		String removeString = "xaef";
+		System.out.println(source + " : " + rsss.removeChars(source, removeString));
+		System.out.println(source + " : " + rsss.removeCharsSB_BOOL(source, removeString));
 	}
 
 }
