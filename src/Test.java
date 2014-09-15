@@ -152,7 +152,7 @@ public class Test {
 		System.out.println("getSuccessorValue: "+bsts.getSuccessorValue(root1, 1));
 		
 		BSTLeastCommonAncester bstlca = new BSTLeastCommonAncester();
-		System.out.println(bstlca.findLeastCommonAncester(root1, 3, 4));
+		System.out.println("LeastCommonAncester:"+bstlca.findLeastCommonAncester(root2, 6, 13));
 		
 	}
 
