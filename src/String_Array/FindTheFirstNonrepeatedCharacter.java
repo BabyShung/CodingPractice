@@ -24,6 +24,30 @@ import java.util.Map;
 
 public class FindTheFirstNonrepeatedCharacter {
 
+	// boolean[]
+	public Character findTheFirstNonrepeatedBOOL(String str) {
+
+		if (str == null || str.isEmpty())
+			return null;
+
+		int[] r = new int[256];
+
+		int len = str.length();
+		// process the int array
+		for (int i = 0; i < len; i++) {
+			char tmp = str.charAt(i);
+			r[tmp]++;
+		}
+		// second scan
+		for (int i = 0; i < len; i++) {
+			char tmp = str.charAt(i);
+			if (r[tmp] == 1)
+				return tmp;
+		}
+		return null;
+	}
+
+	// hash table --- common char: two bytes
 	public Character findTheFirstNonrepeatedNaive(String str) {
 
 		Map<Character, Object> hm = new HashMap<>();
@@ -49,6 +73,7 @@ public class FindTheFirstNonrepeatedCharacter {
 		return null;
 	}
 
+	// hash table --- unicode
 	public String findTheFirstNonrepeated(String str) {
 
 		Map<Integer, Object> hm = new HashMap<>();

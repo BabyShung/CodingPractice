@@ -1,6 +1,8 @@
 import helperClass.BST;
 import helperClass.TreeNode;
+import String_Array.CheckStringPermutation;
 import String_Array.FindTheFirstNonrepeatedCharacter;
+import String_Array.HasAllUniqueCharacter;
 import String_Array.RemoveSpecifiedString;
 import Tree.BSTLeastCommonAncester;
 import Tree.BSTSuccessor;
@@ -158,8 +160,11 @@ public class Test {
 		
 		
 		FindTheFirstNonrepeatedCharacter ffnc = new FindTheFirstNonrepeatedCharacter();
-		System.out.println("find the first:" + ffnc.findTheFirstNonrepeated("afmvmcfvakwwk"));
-		System.out.println("find the first Naive:" + ffnc.findTheFirstNonrepeatedNaive("afmvmfvakwiwk"));
+		
+		String sourceX = "afmvmccfvakXwwk";
+		System.out.println("find the first:" + ffnc.findTheFirstNonrepeated(sourceX));
+		System.out.println("find the first:" + ffnc.findTheFirstNonrepeatedBOOL(sourceX));
+		System.out.println("find the first:" + ffnc.findTheFirstNonrepeatedNaive(sourceX));
 		
 		RemoveSpecifiedString rsss = new RemoveSpecifiedString();
 		String source = "fab cdx ef ghffexxy";
@@ -168,6 +173,18 @@ public class Test {
 		System.out.println(source + " : " + rsss.removeCharsSB_BOOL(source, removeString));
 		System.out.println(source + " : " + rsss.removeCharsARRAY_HM(source, removeString));
 		System.out.println(source + " : " + rsss.removeCharsARRAY_BOOL(source, removeString));
+		
+		HasAllUniqueCharacter hauc = new HasAllUniqueCharacter();
+		String sourceH = "abcqXydefgjhX";
+		System.out.println("Has all unique: " + hauc.hasAllUniqueChar(sourceH));
+		System.out.println("Has all unique: " + hauc.hasAllUniqueCharWorse(sourceH));
+		System.out.println("Has all unique: " + hauc.hasAllUniqueCharHM(sourceH));
+		
+		CheckStringPermutation csp = new CheckStringPermutation();
+		String sourceCSA = "abcqXydefgjhX";
+		String sourceCSB = "abdcXyeqgfhXj";
+		System.out.println("is String permuted: " + csp.isPermutation(sourceCSA, sourceCSB));
+		System.out.println("is String permuted: " + csp.isPermutationHM(sourceCSA, sourceCSB));
 	}
 
 }
