@@ -200,7 +200,8 @@ public class Test {
 		
 		sortAnagrams sortA = new sortAnagrams();
 		String[] stringArr = {"loe", "bca","ssde","abc","oer","zvx","cba","acb","eerqw","dewq"};
-		sortA.sort(stringArr);
+		//sortA.sort(stringArr);
+		sortA.sortWithHM(stringArr);
 		for(String s : stringArr){
 			System.out.print(s + " ");
 		}
