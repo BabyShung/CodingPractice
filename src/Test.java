@@ -1,5 +1,7 @@
 import helperClass.BST;
 import helperClass.TreeNode;
+import String_Array.Atoi_StringToInt;
+import String_Array.Atoi_intToString;
 import String_Array.CheckStringPermutation;
 import String_Array.FindTheFirstNonrepeatedCharacter;
 import String_Array.HasAllUniqueCharacter;
@@ -185,6 +187,15 @@ public class Test {
 		String sourceCSB = "abdcXyeqgfhXj";
 		System.out.println("is String permuted: " + csp.isPermutation(sourceCSA, sourceCSB));
 		System.out.println("is String permuted: " + csp.isPermutationHM(sourceCSA, sourceCSB));
+		
+		Atoi_intToString aits = new Atoi_intToString();
+		int sourceNum = -132450001;
+		System.out.println("intToString: " + aits.intToString(sourceNum));
+		System.out.println("intToString: " + aits.intToStringW(sourceNum));
+		
+		String sourceAtoi = "    -233212.3   ";
+		Atoi_StringToInt asti = new Atoi_StringToInt();
+		System.out.println("StringToInt: " + asti.atoi(sourceAtoi));
 	}
 
 }
