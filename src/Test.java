@@ -1,5 +1,6 @@
 import helperClass.BST;
 import helperClass.TreeNode;
+import Sorting.sortAnagrams;
 import String_Array.Atoi_StringToInt;
 import String_Array.Atoi_intToString;
 import String_Array.CheckStringPermutation;
@@ -196,6 +197,13 @@ public class Test {
 		String sourceAtoi = "    -233212.3   ";
 		Atoi_StringToInt asti = new Atoi_StringToInt();
 		System.out.println("StringToInt: " + asti.atoi(sourceAtoi));
+		
+		sortAnagrams sortA = new sortAnagrams();
+		String[] stringArr = {"loe", "bca","ssde","abc","oer","zvx","cba","acb","eerqw","dewq"};
+		sortA.sort(stringArr);
+		for(String s : stringArr){
+			System.out.print(s + " ");
+		}
 	}
 
 }

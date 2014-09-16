@@ -33,6 +33,7 @@ import java.util.PriorityQueue;
 
 public class MergeKSortedList {
 
+	//priority queue
 	public ListNode mergeKLists(ArrayList<ListNode> lists) {
 		if (lists == null || lists.isEmpty())
 			return null;
