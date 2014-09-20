@@ -1,6 +1,16 @@
 package String_Array;
 
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Set;
+
+/**
+ * Given a string, check to see if every character in the string is unique
+ * 
+ * @author haozheng
+ *
+ */
+
 
 public class HasAllUniqueCharacter {
 
@@ -66,6 +76,28 @@ public class HasAllUniqueCharacter {
 		for (Object obj : hm.values()) {
 			if (obj != once)
 				return false;
+		}
+		return true;
+	}
+
+	// using hash set
+	public boolean hasAllUniqueCharHS(String str) {
+
+		if (str == null || str.isEmpty())
+			return true;
+
+		Set<Character> hs = new HashSet<>();
+
+		int len = str.length();
+
+		for (int i = 0; i < len; i++) {
+			char tmp = str.charAt(i);
+
+			if (hs.contains(tmp)) {
+				return false;
+			} else {
+				hs.add(tmp);
+			}
 		}
 		return true;
 	}

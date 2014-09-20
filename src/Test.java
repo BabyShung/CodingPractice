@@ -178,10 +178,11 @@ public class Test {
 		System.out.println(source + " : " + rsss.removeCharsARRAY_BOOL(source, removeString));
 		
 		HasAllUniqueCharacter hauc = new HasAllUniqueCharacter();
-		String sourceH = "abcqXydefgjhX";
+		String sourceH = "abcqXydefgjh";
 		System.out.println("Has all unique: " + hauc.hasAllUniqueChar(sourceH));
 		System.out.println("Has all unique: " + hauc.hasAllUniqueCharWorse(sourceH));
 		System.out.println("Has all unique: " + hauc.hasAllUniqueCharHM(sourceH));
+		System.out.println("Has all unique: " + hauc.hasAllUniqueCharHS(sourceH));
 		
 		CheckStringPermutation csp = new CheckStringPermutation();
 		String sourceCSA = "abcqXydefgjhX";
