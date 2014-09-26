@@ -4,6 +4,14 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * Again, think of it in DFS way
+ * 
+ * 
+ * @author haozheng
+ *
+ */
+
 public class Permutation1And2 {
 
 	// given [1,2,3]
@@ -47,7 +55,7 @@ public class Permutation1And2 {
 
 	}
 
-	//only need to add one sentence
+	// only need to add one sentence
 	public List<List<Integer>> permuteUnique(int[] num) {
 
 		List<List<Integer>> res = new ArrayList<>();

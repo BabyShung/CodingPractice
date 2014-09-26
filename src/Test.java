@@ -18,6 +18,7 @@ import Tree.SameTree;
 import Tree.ValidateBinarySearchTree;
 import applications.Combination;
 import applications.GrayCode;
+import applications.ReverseInt;
 
 public class Test {
 
@@ -245,7 +246,11 @@ public class Test {
 		for(List<Integer> al : ssR){
 			System.out.print(al.size() +" :: ");
 		}
+		System.out.println();
 		
+		
+		ReverseInt rvi = new ReverseInt();
+		System.out.println("reversed: "+rvi.reverse(1000000002));
 		
 	}
 

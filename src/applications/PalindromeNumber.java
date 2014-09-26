@@ -8,6 +8,8 @@ package applications;
  */
 
 public class PalindromeNumber {
+
+	// reuse code from (reverse int)
 	public boolean isPalindrome(int x) {
 		if (x < 0)
 			return false;
@@ -39,7 +41,24 @@ public class PalindromeNumber {
 			// lower the highest digit
 			div /= 100;
 		}
+		return true;
+	}
 
+	public boolean isPalindromeByHao(int x) {
+		if (x < 0)
+			return false;
+		int divisor = 1;
+		while (x / divisor >= 10)
+			divisor *= 10;
+		while (divisor > 0) {
+			if (x / divisor != x % 10)
+				return false;
+			else {
+				x %= divisor;
+				x /= 10;
+				divisor /= 100;
+			}
+		}
 		return true;
 	}
 }
