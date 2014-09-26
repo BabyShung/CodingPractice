@@ -1,7 +1,10 @@
-import java.util.ArrayList;
-
 import helperClass.BST;
 import helperClass.TreeNode;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import DFS.Subset1And2;
 import Sorting.sortAnagrams;
 import String_Array.Atoi_StringToInt;
 import String_Array.Atoi_intToString;
@@ -233,6 +236,17 @@ public class Test {
 			}
 			System.out.print("], ");
 		}
+		
+		
+		Subset1And2 ss1 = new Subset1And2();
+		int[] ssArr = {1, 2, 3};
+		List<List<Integer>> ssR = ss1.subsets1(ssArr);
+		System.out.println("\nSubset:");
+		for(List<Integer> al : ssR){
+			System.out.print(al.size() +" :: ");
+		}
+		
+		
 	}
 
 }

@@ -43,11 +43,11 @@ public class Combination {
 			}
 
 			// append rest
-			for (int j = 0; j < num; ++j) { // loop through results from
+			for (int j = 0; j < num; j++) { // loop through results from
 											// (i-1)-level
 				ArrayList<Integer> cur = results.get(j);
 				int last = cur.get(cur.size() - 1);
-				for (last += 1; last < n - k + 1; ++last) {
+				for (last += 1; last < n - k + 1; last++) {
 					ArrayList<Integer> res = new ArrayList<Integer>(cur);
 					res.add(last);
 					results.add(res);
