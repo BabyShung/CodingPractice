@@ -3,6 +3,13 @@ package applications;
 /**
  * Determine whether an integer is a palindrome. Do this without extra space.
  * 
+ * Solutions:
+ * 
+ * 1.use reverse int function to compare two long
+ * 
+ * 2.fetch leftmost digit and right digit by math and compare and recur
+ * 
+ * 
  * @author haozheng
  *
  */
