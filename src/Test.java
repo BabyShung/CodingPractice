@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 import helperClass.BST;
 import helperClass.TreeNode;
 import Sorting.sortAnagrams;
@@ -11,6 +13,7 @@ import Tree.BSTLeastCommonAncester;
 import Tree.BSTSuccessor;
 import Tree.SameTree;
 import Tree.ValidateBinarySearchTree;
+import applications.Combination;
 import applications.GrayCode;
 
 public class Test {
@@ -112,28 +115,27 @@ public class Test {
 		//
 		GrayCode gc = new GrayCode();
 		gc.grayCode(3);
-		
-		System.out.println("yeah!: "+gc.lowbit(4));
+
+		System.out.println("yeah!: " + gc.lowbit(4));
 
 		ValidateBinarySearchTree vbst = new ValidateBinarySearchTree();
 
 		SameTree st = new SameTree();
 
 		BSTSuccessor bsts = new BSTSuccessor();
-		
-		
+
 		// Hao BST
 		BST haoBST = new BST();
 		haoBST.insert(5);
 		haoBST.insert(3);
 		haoBST.insert(7);
 		haoBST.insert(4);
-//		haoBST.insert(2);
-//		haoBST.insert(6);
-//		haoBST.insert(9);
-//		haoBST.insert(15);
-//		haoBST.insert(11);
-//		haoBST.insert(13);
+		// haoBST.insert(2);
+		// haoBST.insert(6);
+		// haoBST.insert(9);
+		// haoBST.insert(15);
+		// haoBST.insert(11);
+		// haoBST.insert(13);
 
 		BST haoBST2 = new BST();
 		haoBST2.insert(5);
@@ -155,56 +157,81 @@ public class Test {
 
 		System.out.println(vbst.isValidBSTIterative(root1));
 		System.out.println(st.isSameTreeIterative(root1, root2));
-		
-		System.out.println("getSuccessorValue: "+bsts.getSuccessorValue(root1, 1));
-		
+
+		System.out.println("getSuccessorValue: "
+				+ bsts.getSuccessorValue(root1, 1));
+
 		BSTLeastCommonAncester bstlca = new BSTLeastCommonAncester();
-		System.out.println("LeastCommonAncester:"+bstlca.findLeastCommonAncester(root2, 6, 13));
-		
-		
+		System.out.println("LeastCommonAncester:"
+				+ bstlca.findLeastCommonAncester(root2, 6, 13));
+
 		FindTheFirstNonrepeatedCharacter ffnc = new FindTheFirstNonrepeatedCharacter();
-		
+
 		String sourceX = "afmvmccfvakXwwk";
-		System.out.println("find the first:" + ffnc.findTheFirstNonrepeated(sourceX));
-		System.out.println("find the first:" + ffnc.findTheFirstNonrepeatedBOOL(sourceX));
-		System.out.println("find the first:" + ffnc.findTheFirstNonrepeatedNaive(sourceX));
-		
+		System.out.println("find the first:"
+				+ ffnc.findTheFirstNonrepeated(sourceX));
+		System.out.println("find the first:"
+				+ ffnc.findTheFirstNonrepeatedBOOL(sourceX));
+		System.out.println("find the first:"
+				+ ffnc.findTheFirstNonrepeatedNaive(sourceX));
+
 		RemoveSpecifiedString rsss = new RemoveSpecifiedString();
 		String source = "fab cdx ef ghffexxy";
 		String removeString = "bxaef ";
-		System.out.println(source + " : " + rsss.removeChars(source, removeString));
-		System.out.println(source + " : " + rsss.removeCharsSB_BOOL(source, removeString));
-		System.out.println(source + " : " + rsss.removeCharsARRAY_HM(source, removeString));
-		System.out.println(source + " : " + rsss.removeCharsARRAY_BOOL(source, removeString));
-		
+		System.out.println(source + " : "
+				+ rsss.removeChars(source, removeString));
+		System.out.println(source + " : "
+				+ rsss.removeCharsSB_BOOL(source, removeString));
+		System.out.println(source + " : "
+				+ rsss.removeCharsARRAY_HM(source, removeString));
+		System.out.println(source + " : "
+				+ rsss.removeCharsARRAY_BOOL(source, removeString));
+
 		HasAllUniqueCharacter hauc = new HasAllUniqueCharacter();
 		String sourceH = "abcqXydefgjh";
 		System.out.println("Has all unique: " + hauc.hasAllUniqueChar(sourceH));
-		System.out.println("Has all unique: " + hauc.hasAllUniqueCharWorse(sourceH));
-		System.out.println("Has all unique: " + hauc.hasAllUniqueCharHM(sourceH));
-		System.out.println("Has all unique: " + hauc.hasAllUniqueCharHS(sourceH));
-		
+		System.out.println("Has all unique: "
+				+ hauc.hasAllUniqueCharWorse(sourceH));
+		System.out.println("Has all unique: "
+				+ hauc.hasAllUniqueCharHM(sourceH));
+		System.out.println("Has all unique: "
+				+ hauc.hasAllUniqueCharHS(sourceH));
+
 		CheckStringPermutation csp = new CheckStringPermutation();
 		String sourceCSA = "abcqXydefgjhX";
 		String sourceCSB = "abdcXyeqgfhXj";
-		System.out.println("is String permuted: " + csp.isPermutation(sourceCSA, sourceCSB));
-		System.out.println("is String permuted: " + csp.isPermutationHM(sourceCSA, sourceCSB));
-		
+		System.out.println("is String permuted: "
+				+ csp.isPermutation(sourceCSA, sourceCSB));
+		System.out.println("is String permuted: "
+				+ csp.isPermutationHM(sourceCSA, sourceCSB));
+
 		Atoi_intToString aits = new Atoi_intToString();
 		int sourceNum = -132450001;
 		System.out.println("intToString: " + aits.intToString(sourceNum));
 		System.out.println("intToString: " + aits.intToStringW(sourceNum));
-		
+
 		String sourceAtoi = "    -233212.3   ";
 		Atoi_StringToInt asti = new Atoi_StringToInt();
 		System.out.println("StringToInt: " + asti.atoi(sourceAtoi));
-		
+
 		sortAnagrams sortA = new sortAnagrams();
-		String[] stringArr = {"loe", "bca","ssde","abc","oer","zvx","cba","acb","eerqw","dewq"};
-		//sortA.sort(stringArr);
+		String[] stringArr = { "loe", "bca", "ssde", "abc", "oer", "zvx",
+				"cba", "acb", "eerqw", "dewq" };
+		// sortA.sort(stringArr);
 		sortA.sortWithHM(stringArr);
-		for(String s : stringArr){
+		for (String s : stringArr) {
 			System.out.print(s + " ");
+		}
+
+		Combination comb = new Combination();
+		ArrayList<ArrayList<Integer>> rrc = comb.combineI(4, 2);
+		System.out.println("\nCombinations:");
+		for(ArrayList<Integer> al : rrc){
+			System.out.print("[");
+			for(int tmp : al){
+				System.out.print(tmp + " ");
+			}
+			System.out.print("], ");
 		}
 	}
 
