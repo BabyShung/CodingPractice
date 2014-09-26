@@ -45,6 +45,7 @@ public class Subset1And2 {
 		}
 	}
 
+	// only need to add one sentence
 	public List<List<Integer>> subsets2(int[] S) {
 		List<List<Integer>> r = new ArrayList<>();
 
