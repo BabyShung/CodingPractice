@@ -22,6 +22,7 @@ import Tree.ValidateBinarySearchTree;
 import applications.Combination;
 import applications.GrayCode;
 import applications.ReverseInt;
+import applications.SingleNumber;
 
 public class Test {
 
@@ -254,7 +255,14 @@ public class Test {
 		System.out.println("reversed: " + rvi.reverse(1000000002));
 
 		CountWords cw = new CountWords();
-		System.out.println("CountWords: " + cw.countTheWords(" This  is   Hao.  Great!   "));
+		System.out.println("CountWords: "
+				+ cw.countTheWords(" This  is   Hao.  Great!   "));
+
+		int[] snumArr = { 0, 0, 0, 1, 1, 2, 2, 1, 1, 4, 3, 3, 4, 4, 0, };
+		SingleNumber snum = new SingleNumber();
+		System.out.println("SingleNumber: "
+				+snum.singleNumber(snumArr));
+
 	}
 
 }
