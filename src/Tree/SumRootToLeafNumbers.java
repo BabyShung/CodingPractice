@@ -29,6 +29,44 @@ import java.util.Stack;
  */
 
 public class SumRootToLeafNumbers {
+	
+	
+	public int sumNumbersByHao(TreeNode root) {
+        if(root == null)
+            return 0;
+            
+        Stack<TreeNode> s1 = new Stack<>();
+        Stack<Integer> s2 = new Stack<>();
+    
+        s1.push(root);
+        s2.push(0);
+        
+        int sum = 0;
+        
+        while(!s1.isEmpty()){
+            TreeNode c = s1.pop();
+            int pre = c.val + s2.pop()*10;
+            
+            if(c.left==null&&c.right == null){//DFS and reach to leaf
+                sum += pre;
+                continue;
+            }
+            
+            if(c.left!=null){
+                s1.push(c.left);
+            }
+            if(c.right!=null){
+                s1.push(c.right);
+            }
+            
+            if(c.left!=null&&c.right!=null){
+                s2.push(pre);
+            }
+            s2.push(pre);
+        }
+        return sum;
+    }
+	
 	public int sumNumbers(TreeNode root) {
 		if (root == null)
 			return 0;
@@ -55,10 +93,8 @@ public class SumRootToLeafNumbers {
 			if (c.right != null)
 				s.push(c.right);
 
-			if (c.left != null && c.right != null)// if the current node has two
-													// children, push twice
-													// prefix since it will come
-													// back
+			// if the current node has two children, push twice prefix since it will come back
+			if (c.left != null && c.right != null)
 				p.push(preN);
 			p.push(preN);
 		}
@@ -76,7 +112,6 @@ public class SumRootToLeafNumbers {
 		if (root.left == null && root.right == null) { // reach a leaf
 			return sum + path;
 		}
-
 		if (root.left != null) { // go to left subtree
 			sum = sumNumbersHelper(root.left, path * 10 + root.left.val, sum);
 		}
