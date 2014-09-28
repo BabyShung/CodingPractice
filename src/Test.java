@@ -4,11 +4,14 @@ import helperClass.TreeNode;
 import java.util.ArrayList;
 import java.util.List;
 
+import BinarySearchThinking.SearchForARange;
+import BinarySearchThinking.SearchInsertPosition;
 import DFS.Subset1And2;
 import Sorting.sortAnagrams;
 import String_Array.Atoi_StringToInt;
 import String_Array.Atoi_intToString;
 import String_Array.CheckStringPermutation;
+import String_Array.CountWords;
 import String_Array.FindTheFirstNonrepeatedCharacter;
 import String_Array.HasAllUniqueCharacter;
 import String_Array.RemoveSpecifiedString;
@@ -58,15 +61,15 @@ public class Test {
 		// Sqrt sqrt = new Sqrt();
 		// System.out.println("Sqrt: " + sqrt.sqrt(2));
 		//
-		// int[] sfararr = { 1, 7, 8, 8, 8, 8, 9, 11 };
-		// SearchForARange sfar = new SearchForARange();
-		// int[] sfarResult = sfar.searchRange(sfararr, 8);
-		// System.out.println("[" + sfarResult[0] + "," + sfarResult[1] + "]");
+		int[] sfararr = { 1, 7, 8, 8, 8, 8, 9, 11 };
+		SearchForARange sfar = new SearchForARange();
+		int[] sfarResult = sfar.searchRange(sfararr, 8);
+		System.out.println("[" + sfarResult[0] + "," + sfarResult[1] + "]");
 		//
 		//
-		// SearchInsertPosition sip = new SearchInsertPosition();
-		// System.out.println("SearchInsertPosition: "
-		// +sip.searchInsert(sfararr, 8));
+		SearchInsertPosition sip = new SearchInsertPosition();
+		System.out.println("SearchInsertPosition: "
+				+ sip.searchInsert(sfararr, 8));
 		//
 
 		// UniqueBinarySearchTrees ubst = new UniqueBinarySearchTrees();
@@ -230,28 +233,28 @@ public class Test {
 		Combination comb = new Combination();
 		ArrayList<ArrayList<Integer>> rrc = comb.combineI(4, 2);
 		System.out.println("\nCombinations:");
-		for(ArrayList<Integer> al : rrc){
+		for (ArrayList<Integer> al : rrc) {
 			System.out.print("[");
-			for(int tmp : al){
+			for (int tmp : al) {
 				System.out.print(tmp + " ");
 			}
 			System.out.print("], ");
 		}
-		
-		
+
 		Subset1And2 ss1 = new Subset1And2();
-		int[] ssArr = {1, 2, 3};
+		int[] ssArr = { 1, 2, 3 };
 		List<List<Integer>> ssR = ss1.subsets1(ssArr);
 		System.out.println("\nSubset:");
-		for(List<Integer> al : ssR){
-			System.out.print(al.size() +" :: ");
+		for (List<Integer> al : ssR) {
+			System.out.print(al.size() + " :: ");
 		}
 		System.out.println();
-		
-		
+
 		ReverseInt rvi = new ReverseInt();
-		System.out.println("reversed: "+rvi.reverse(1000000002));
-		
+		System.out.println("reversed: " + rvi.reverse(1000000002));
+
+		CountWords cw = new CountWords();
+		System.out.println("CountWords: " + cw.countTheWords(" This  is   Hao.  Great!   "));
 	}
 
 }
