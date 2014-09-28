@@ -1,4 +1,4 @@
-package applications;
+package DFS;
 
 import java.util.ArrayList;
 

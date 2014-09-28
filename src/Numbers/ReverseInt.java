@@ -1,4 +1,4 @@
-package applications;
+package Numbers;
 
 public class ReverseInt {
 	public int reverse(int x) {

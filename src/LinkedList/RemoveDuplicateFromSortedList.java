@@ -1,4 +1,4 @@
-package applications;
+package LinkedList;
 
 import helperClass.ListNode;
 

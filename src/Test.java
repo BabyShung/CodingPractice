@@ -6,7 +6,10 @@ import java.util.List;
 
 import BinarySearchThinking.SearchForARange;
 import BinarySearchThinking.SearchInsertPosition;
+import DFS.Combination;
 import DFS.Subset1And2;
+import Numbers.ReverseInt;
+import Numbers.SingleNumber;
 import Sorting.sortAnagrams;
 import String_Array.Atoi_StringToInt;
 import String_Array.Atoi_intToString;
@@ -19,10 +22,7 @@ import Tree.BSTLeastCommonAncester;
 import Tree.BSTSuccessor;
 import Tree.SameTree;
 import Tree.ValidateBinarySearchTree;
-import applications.Combination;
 import applications.GrayCode;
-import applications.ReverseInt;
-import applications.SingleNumber;
 
 public class Test {
 

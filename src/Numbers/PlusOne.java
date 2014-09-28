@@ -1,4 +1,4 @@
-package applications;
+package Numbers;
 
 /**
  * Given a non-negative number represented as an array of digits, plus one to

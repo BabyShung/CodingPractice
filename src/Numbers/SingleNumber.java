@@ -1,4 +1,4 @@
-package applications;
+package Numbers;
 
 public class SingleNumber {
 	public int singleNumber(int[] A) {

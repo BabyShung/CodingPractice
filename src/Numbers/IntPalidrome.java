@@ -1,4 +1,4 @@
-package applications;
+package Numbers;
 
 /**
  * Given an integer, check if it is a palindrome without using extra space, O(1)

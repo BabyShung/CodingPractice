@@ -1,4 +1,4 @@
-package applications;
+package String_Array;
 
 /**
  * given two sorted array, find their intersection
