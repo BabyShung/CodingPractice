@@ -17,6 +17,7 @@ import String_Array.CheckStringPermutation;
 import String_Array.CountWords;
 import String_Array.FindTheFirstNonrepeatedCharacter;
 import String_Array.HasAllUniqueCharacter;
+import String_Array.MinimumConsecutiveMemory;
 import String_Array.RemoveSpecifiedString;
 import Tree.BSTLeastCommonAncester;
 import Tree.BSTSuccessor;
@@ -260,9 +261,11 @@ public class Test {
 
 		int[] snumArr = { 0, 0, 0, 1, 1, 2, 2, 1, 1, 4, 3, 3, 4, 4, 0, };
 		SingleNumber snum = new SingleNumber();
-		System.out.println("SingleNumber: "
-				+snum.singleNumber(snumArr));
+		System.out.println("SingleNumber: " + snum.singleNumber(snumArr));
 
+		int[] mcmArr = { 1, 0, 0, 1, 1, 0, 0, 0, 0  };
+		MinimumConsecutiveMemory mcm = new MinimumConsecutiveMemory();
+		System.out.println("Min ConseMem: " + mcm.minConsecutiveMemory(mcmArr));
 	}
 
 }
