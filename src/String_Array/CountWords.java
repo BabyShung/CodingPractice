@@ -6,13 +6,9 @@ public class CountWords {
 
 		if (s == null || s.isEmpty())
 			return 0;
-
 		char[] arr = s.toCharArray();
-
 		int i = 0, count = 0;
-
 		while (i < arr.length) {
-
 			if (arr[i] == ' ') {
 				i++;
 			} else {
@@ -20,9 +16,9 @@ public class CountWords {
 					i++;
 				// completely find a word
 				count++;
+				i++;
 			}
 		}
 		return count;
 	}
-
 }

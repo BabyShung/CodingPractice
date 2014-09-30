@@ -1,6 +1,35 @@
 package Merge_LinkedList_Array;
 
+/**
+ * Given two binary strings, return their sum (also a binary string).
+ * 
+ * For example, a = "11" b = "1" Return "100".
+ * 
+ * @author haozheng
+ *
+ */
+
 public class AddBinary {
+
+	public String addBinaryHao(String a, String b) {// O(n)
+
+		StringBuilder sb = new StringBuilder();
+
+		int lastA = a.length() - 1;
+		int lastB = b.length() - 1;
+		int carry = 0;
+
+		while (lastA >= 0 || lastB >= 0 || carry > 0) {
+			int num1 = lastA >= 0 ? a.charAt(lastA--) - '0' : 0;
+			int num2 = lastB >= 0 ? b.charAt(lastB--) - '0' : 0;
+			int current = (num1 + num2 + carry) & 1; // means mod 2
+			carry = (num1 + num2 + carry) >> 1; // means divided by 2
+			sb.append(current);
+		}
+		return sb.reverse().toString();
+	}
+
+	// too verbose
 	public String addBinary(String a, String b) {
 
 		StringBuilder aa = new StringBuilder(a);

@@ -257,7 +257,7 @@ public class Test {
 
 		CountWords cw = new CountWords();
 		System.out.println("CountWords: "
-				+ cw.countTheWords(" This  is   Hao.  Great!   "));
+				+ cw.countTheWords(" This  is   Hao.  Great! kfc  ,  "));
 
 		int[] snumArr = { 0, 0, 0, 1, 1, 2, 2, 1, 1, 4, 3, 3, 4, 4, 0, };
 		SingleNumber snum = new SingleNumber();
