@@ -1,31 +1,62 @@
 package DFS;
 
 import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * 		Think in DFS *************************
+ * 
+ * 				  1		     2	   3
+ * 			  /   |   \     / \    |
+ * 			 2    3    4   3   4   4
+ * 			/|\   /\   |   /\  |   |
+ * 		   3 4 5  4 5  5   4 5 5   5
+ * 
+ * 
+ * 
+ */
+
 
 public class Combination {
-	public ArrayList<ArrayList<Integer>> combine(int n, int k) {
-		ArrayList<ArrayList<Integer>> res = new ArrayList<ArrayList<Integer>>();
-		combineHelper(1, n, k, new ArrayList<Integer>(), res);
+
+	/**
+	 * Sophie's solution, still thinking in DFS
+	 * 
+	 * @param n
+	 * @param k
+	 * @return
+	 */
+	public List<List<Integer>> combine(int n, int k) {
+
+		List<List<Integer>> res = new ArrayList<>();
+		List<Integer> tmp = new ArrayList<>();
+		if (n == 0 || k == 0)
+			return res;
+		dfs(1, n, k, tmp, res);
 		return res;
 	}
 
-	private void combineHelper(int s, int n, int k, ArrayList<Integer> path,
-			ArrayList<ArrayList<Integer>> res) {
-		if (n == 0)
-			return;
+	private void dfs(int pos, int n, int k, List<Integer> tmp,
+			List<List<Integer>> res) {
+
 		if (k == 0) {
-			ArrayList<Integer> r = new ArrayList<Integer>(path);
-			res.add(r);
+			res.add(new ArrayList<Integer>(tmp));
 			return;
 		}
-
-		for (int i = s; i <= n - k + 1; ++i) {
-			path.add(i);
-			combineHelper(i + 1, n, k - 1, path, res);
-			path.remove(path.size() - 1);
+		for (int i = pos; i <= n - k + 1; i++) {
+			tmp.add(i);
+			dfs(i + 1, n, k - 1, tmp, res);
+			tmp.remove(tmp.size() - 1);
 		}
 	}
 
+	/**
+	 * ...
+	 * 
+	 * @param n
+	 * @param k
+	 * @return
+	 */
 	public ArrayList<ArrayList<Integer>> combineI(int n, int k) {
 
 		ArrayList<ArrayList<Integer>> results = new ArrayList<ArrayList<Integer>>();
