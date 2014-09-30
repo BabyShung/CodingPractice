@@ -11,7 +11,7 @@ package Merge_LinkedList_Array;
 
 public class AddBinary {
 
-	public String addBinaryHao(String a, String b) {// O(n)
+	public String addBinaryByHao(String a, String b) {// O(n)
 
 		StringBuilder sb = new StringBuilder();
 
