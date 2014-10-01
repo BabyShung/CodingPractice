@@ -2,7 +2,8 @@ package applications;
 
 public class RotateImage {
 	public void rotate(int[][] matrix) {
-		for (int level = 0, len = matrix.length; level < len; level++, len--) {
+		int len = matrix.length;
+		for (int level = 0; level < len; level++, len--) {
 			int end = len - 1;
 			for (int pos = level; pos < end; ++pos) {
 
@@ -17,6 +18,9 @@ public class RotateImage {
 				matrix[end][tail] = matrix[pos][end];
 				// top -> right
 				matrix[pos][end] = tmp;
+				
+				String s;
+				s.sub
 			}
 		}
 	}

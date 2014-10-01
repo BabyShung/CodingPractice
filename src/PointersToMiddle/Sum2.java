@@ -1,4 +1,4 @@
-package applications;
+package PointersToMiddle;
 
 /**
  * Given an array of integers, find two numbers such that they add up to a specific target number.
@@ -28,21 +28,21 @@ public class Sum2 {
 		return r;
 	}
 
-	// public int[] twoSumOlogN(int[] numbers, int target) {
-	//
-	// Arrays.sort(numbers);
-	// int i = 0, j = numbers.length - 1;
-	//
-	// while (i != j) {
-	// int sum = numbers[i] + numbers[j];
-	// if (sum == target) {
-	// return new int[] { i + 1, j + 1 };
-	// } else if (sum > target) {// move last point
-	// j--;
-	// } else {
-	// i++;
-	// }
-	// }
-	// return new int[2];
-	// }
+	public int[] twoSumOlogN(int[] numbers, int target) {
+
+		Arrays.sort(numbers);
+		int i = 0, j = numbers.length - 1;
+
+		while (i != j) {
+			int sum = numbers[i] + numbers[j];
+			if (sum == target) {
+				return new int[] { i + 1, j + 1 };
+			} else if (sum > target) {// move last point
+				j--;
+			} else {
+				i++;
+			}
+		}
+		return new int[2];
+	}
 }
