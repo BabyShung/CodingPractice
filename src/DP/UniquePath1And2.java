@@ -10,10 +10,19 @@ package DP;
  * 
  * How many possible unique paths are there?
  * 
- * Classic DP:
+ * Q1: Classic DP:
  * 
  * numOfPath[i][j] = numOfPath[i - 1][j] + numOfPath[i][j - 1], i>0,j>0
  * numOfPath[i][j] = 1, i = 0 or j = 0 since there will be only one path
+ * 
+ * 
+ * Q2:
+ * 
+ * just update numOfPath based on the obstacleGrid
+ * 
+ * 
+ * 
+ * 
  * 
  * @author haozheng
  *
