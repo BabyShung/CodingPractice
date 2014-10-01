@@ -40,16 +40,18 @@ public class SearchInRotatedSortedArray1And2 {
 		}
 		return -1;
 	}
-	
-	public boolean searchII(int[] A, int target) {
-        int f = 0, r = A.length - 1;
 
-        //just add this part to filter the duplicates
-        while (f < r && A[f] == A[r]) {  
-            if (A[f] == target) 
-                return true;  
-            ++f; --r;  
-        } 
+	// with duplicates
+	public boolean searchII(int[] A, int target) {
+		int f = 0, r = A.length - 1;
+
+		// just add this part to filter the duplicates
+		while (f < r && A[f] == A[r]) {
+			if (A[f] == target)
+				return true;
+			++f;
+			--r;
+		}
 
 		while (f <= r) {
 			int m = (f + r) / 2;
@@ -65,5 +67,5 @@ public class SearchInRotatedSortedArray1And2 {
 			}
 		}
 		return false;
-    }
+	}
 }
