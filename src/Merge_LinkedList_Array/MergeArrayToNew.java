@@ -8,7 +8,7 @@ package Merge_LinkedList_Array;
  * 
  */
 
-public class mergeArray {
+public class MergeArrayToNew {
 
 	public int[] merge(int[] a, int[] b) {
 		int[] h = new int[a.length + b.length];

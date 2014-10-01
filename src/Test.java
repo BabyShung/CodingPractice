@@ -24,6 +24,7 @@ import Tree.BSTSuccessor;
 import Tree.SameTree;
 import Tree.ValidateBinarySearchTree;
 import applications.GrayCode;
+import applications.RotateImage;
 
 public class Test {
 
@@ -266,6 +267,11 @@ public class Test {
 		int[] mcmArr = { 1, 0, 0, 1, 1, 0, 0, 0, 0  };
 		MinimumConsecutiveMemory mcm = new MinimumConsecutiveMemory();
 		System.out.println("Min ConseMem: " + mcm.minConsecutiveMemory(mcmArr));
+		
+		RotateImage ri = new RotateImage();
+		int[][] matrix = new int[4][10];
+		ri.rotate(matrix);
+		//System.out.println(matrix.length);
 	}
 
 }
