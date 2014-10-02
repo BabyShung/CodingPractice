@@ -9,6 +9,7 @@ package PointersToMiddle;
  Output: index1=1, index2=2
  */
 
+import java.util.Arrays;
 import java.util.HashMap;
 
 public class Sum2 {
