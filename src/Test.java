@@ -259,19 +259,27 @@ public class Test {
 		CountWords cw = new CountWords();
 		System.out.println("CountWords: "
 				+ cw.countTheWords(" This  is   Hao.  Great! kfc  ,  "));
+		System.out.println("CountTheWordsUsingSplit: "
+				+ cw.countTheWordsUsingSplit(" This  is  ss. Hao.  Great! kfc    "));
 
 		int[] snumArr = { 0, 0, 0, 1, 1, 2, 2, 1, 1, 4, 3, 3, 4, 4, 0, };
 		SingleNumber snum = new SingleNumber();
 		System.out.println("SingleNumber: " + snum.singleNumber(snumArr));
 
-		int[] mcmArr = { 1, 0, 0, 1, 1, 0, 0, 0, 0  };
+		int[] mcmArr = { 1, 0, 0, 1, 1, 0, 0, 0, 0 };
 		MinimumConsecutiveMemory mcm = new MinimumConsecutiveMemory();
 		System.out.println("Min ConseMem: " + mcm.minConsecutiveMemory(mcmArr));
-		
+
 		RotateImage ri = new RotateImage();
 		int[][] matrix = new int[4][10];
 		ri.rotate(matrix);
-		//System.out.println(matrix.length);
+		// System.out.println(matrix.length);
+
+		int kk = 1;
+		System.out.println(kk);
+		System.out.println(kk-- > 0 ? "f" : "s");
+		System.out.println(kk);
+
 	}
 
 }

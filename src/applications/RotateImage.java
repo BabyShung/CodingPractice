@@ -18,9 +18,7 @@ public class RotateImage {
 				matrix[end][tail] = matrix[pos][end];
 				// top -> right
 				matrix[pos][end] = tmp;
-				
-				String s;
-				s.sub
+
 			}
 		}
 	}

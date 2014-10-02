@@ -45,6 +45,31 @@ public class Subset1And2 {
 		}
 	}
 
+	// iterative
+	public ArrayList<ArrayList<Integer>> subsets(int[] S) {
+		// sort the given set
+		Arrays.sort(S);
+		// generate subsets
+		ArrayList<ArrayList<Integer>> results = new ArrayList<ArrayList<Integer>>();
+		results.add(new ArrayList<Integer>());
+		for (int i = 0; i < S.length; ++i) {
+			int curSize = results.size();
+			while (curSize-- > 0) {
+				ArrayList<Integer> res = new ArrayList<Integer>(
+						results.get(curSize));
+				res.add(S[i]);
+				results.add(res);
+			}
+		}
+		return results;
+	}
+
+	/**
+	 * II
+	 * 
+	 * @param S
+	 * @return
+	 */
 	// only need to add one sentence
 	public List<List<Integer>> subsets2(int[] S) {
 		List<List<Integer>> r = new ArrayList<>();
